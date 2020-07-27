@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/bookmark.rb'
 
 class BookmarkManager < Sinatra::Base
 
@@ -7,7 +8,13 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/' do
+    Bookmark.create
     erb :index
+  end
+
+  get '/bookmarks' do
+    @bookmarks = Bookmark.all
+    erb :bookmarks
   end
 
 end
