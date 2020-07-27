@@ -1,0 +1,27 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/student/Documents/base/Course/week-4/week4-pairing/bookmark_manager/spec/features/home_page_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Documents/base/Course/week-4/week4-pairing/bookmark_manager/spec/features/test_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1595857983
+  }
+}
