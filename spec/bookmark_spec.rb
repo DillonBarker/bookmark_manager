@@ -2,17 +2,12 @@ require 'bookmark'
 
 describe Bookmark do
 
-  describe '#initialize' do
-    it 'creates an empty list of bookmarks' do
-      expect(Bookmark.new.list).to eq []
-    end
-  end
-
   describe '#all' do
     it 'returns list of all bookmark instances as an array' do
-      Bookmark.create
-      expect(Bookmark.all.empty?).to be true
+      bookmarks = Bookmark.all
+      expect(bookmarks).to include "http://www.makersacademy.com"
+      expect(bookmarks).to include "http://www.destroyallsoftware.com"
+      expect(bookmarks).to include "http://www.google.com"
     end
   end
-
 end
