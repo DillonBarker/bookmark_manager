@@ -15,13 +15,18 @@ So that I can save a website
 I would like to add the site's address and title to bookmark manager
 ```
 
-Setting up the database (Documenting Database Setup):
-- setup psql
-- add database to psql
-- go into database via user
+### Setting up the database (Documenting Database Setup):
+- Setup psql
+- Go into user
 ```
 psql student
 ```
+- Create the database
+```
+CREATE DATABASE bookmark_manager;
+```
+- Enter the database
 ```
 \c bookmark_manager
 ```
+- Then you must run the query from the file 01_create_bookmarks_table.sql
