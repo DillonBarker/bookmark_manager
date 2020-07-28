@@ -30,3 +30,6 @@ CREATE DATABASE bookmark_manager;
 \c bookmark_manager
 ```
 - Then you must run the query from the file 01_create_bookmarks_table.sql
+
+
+- Create a testing database using the same steps as above
