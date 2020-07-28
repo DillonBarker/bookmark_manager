@@ -8,7 +8,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/' do
-    Bookmark.create
+    
     erb :index
   end
 
