@@ -14,6 +14,12 @@ As a time-pressed user
 So that I can save a website
 I would like to add the site's address and title to bookmark manager
 ```
+- Now to address the user story above. At this time I have implemented a database and now can go about adding a new bookmark (first full stack feature)
+  - For this I am going to have to incorportate a method in my Bookmark class that can access the database and create a new row in the bookmarks table.
+  - I then need to link this to the app.rb, so that I can display it within my website (views).
+
+
+
 
 ### Setting up the database (Documenting Database Setup):
 - Setup psql
