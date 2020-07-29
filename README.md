@@ -17,7 +17,8 @@ I would like to add the site's address and title to bookmark manager
 - Now to address the user story above. At this time I have implemented a database and now can go about adding a new bookmark (first full stack feature)
   - For this I am going to have to incorportate a method in my Bookmark class that can access the database and create a new row in the bookmarks table.
   - I then need to link this to the app.rb, so that I can display it within my website (views).
-
+- I have added a test database, described below in the databases explanation
+  - this allows me to have a test database that I can add bookmarks to and clear each time I run an rspec. As a result I don't have to change my tests according to what is in the database but I can add them via connection to PostgreSQL
 
 
 
