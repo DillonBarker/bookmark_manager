@@ -40,4 +40,15 @@ describe Bookmark do
       expect(Bookmark.all.length).to eq 0
     end
   end
+
+  describe '.find' do
+    it 'returns the bookmark selected' do
+      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
+      found = Bookmark.find(id: bookmark.id)
+      expect(found).to be_a Bookmark
+      expect(found.id).to eq bookmark.id
+      expect(found.title).to eq 'Test Bookmark'
+      expect(found.url).to eq 'http://www.testbookmark.com'
+    end
+  end
 end

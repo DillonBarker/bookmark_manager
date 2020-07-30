@@ -45,6 +45,17 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -81,6 +92,25 @@
           null
         ]
       },
+      "/Users/student/Documents/base/Course/week-4/week4-pairing/bookmark_manager/spec/features/updating_bookmark_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/student/Documents/base/Course/week-4/week4-pairing/bookmark_manager/spec/features/viewing_bookmarks_spec.rb": {
         "lines": [
           1,
@@ -99,6 +129,6 @@
         ]
       }
     },
-    "timestamp": 1596116526
+    "timestamp": 1596119107
   }
 }
