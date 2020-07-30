@@ -28,7 +28,7 @@ I would like to add the site's address and title to bookmark manager
 ║            ║<---------------------║            ║<--------------------------║            ║
 ╚════════════╝                      ╚════════════╝                           ╚════════════╝
 ```
-
+  - At this point the goal was to successfully wrap my bookmarks within bookmark objects. This meant adding an initialize to the class so that they began with instances of an id, title and url.
 
 
 
@@ -52,3 +52,8 @@ CREATE DATABASE bookmark_manager;
 - Create a testing database using the same steps as above
 
 - Add a new title column following 02_adding_title_column.sql to both databases
+
+- Now both databases should look something like this:
+<center>
+  <img src='images/database.png'/>
+</center>
