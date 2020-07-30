@@ -20,15 +20,17 @@ class Bookmark
   end
 
   def self.all
-    if ENV['ENVIRONMENT'] == 'test'
-      conn = PG.connect(dbname: 'bookmark_manager_test')
-    else
-      conn = PG.connect(dbname: 'bookmark_manager')
-    end
+    ENV['ENVIRONMENT'] == 'test' ? conn = PG.connect(dbname: 'bookmark_manager_test') : conn = PG.connect(dbname: 'bookmark_manager')
 
     print = conn.exec('SELECT * FROM bookmarks;')
     print.map do |bookmark|
       Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
     end
+  end
+
+  def self.delete(id:)
+    ENV['ENVIRONMENT'] == 'test' ? conn = PG.connect(dbname: 'bookmark_manager_test') : conn = PG.connect(dbname: 'bookmark_manager')
+
+    conn.exec("DELETE FROM bookmarks where id = #{id}")
   end
 end
