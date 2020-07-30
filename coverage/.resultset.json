@@ -49,7 +49,7 @@
           1,
           1,
           1,
-          1,
+          0,
           null,
           null
         ]
@@ -58,6 +58,14 @@
         "lines": [
           1,
           1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Documents/base/Course/week-4/week4-pairing/bookmark_manager/spec/features/title_of_bookmark_field_spec.rb": {
+        "lines": [
           1,
           1,
           null,
@@ -88,6 +96,6 @@
         ]
       }
     },
-    "timestamp": 1596029849
+    "timestamp": 1596099286
   }
 }
