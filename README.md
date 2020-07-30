@@ -29,7 +29,13 @@ I would like to add the site's address and title to bookmark manager
 ╚════════════╝                      ╚════════════╝                           ╚════════════╝
 ```
   - At this point the goal was to successfully wrap my bookmarks within bookmark objects. This meant adding an initialize to the class so that they began with instances of an id, title and url.
-
+Next stage:
+```
+As a user
+So I can remove my bookmark from Bookmark Manager
+I want to delete a bookmark
+```
+- Click some delete button next to a bookmark, it removes that bookmark from my list
 
 
 
