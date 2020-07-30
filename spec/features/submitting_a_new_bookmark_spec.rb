@@ -1,6 +1,6 @@
-feature 'sumbitting a new bookmark via form' do
-  scenario 'user fills out form and clicks ' do
+feature 'adding bookmarks' do
+  scenario 'A user can add a bookmark to bookmark manager' do
     add_test_bookmark
-    expect(page).to have_content 'http://www.test.url'
+    expect(page).to have_link('Test Bookmark', href: 'http://www.testbookmark.com')
   end
 end

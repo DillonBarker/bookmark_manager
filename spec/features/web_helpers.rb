@@ -1,7 +1,6 @@
 def add_test_bookmark
   visit('/bookmarks/new')
-  fill_in('title', with: '')
-  fill_in('url', with: 'http://www.test.url')
+  fill_in('url', with: 'http://www.testbookmark.com')
+  fill_in('title', with: 'Test Bookmark')
   click_button 'Submit'
-
 end

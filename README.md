@@ -20,6 +20,17 @@ I would like to add the site's address and title to bookmark manager
 - I have added a test database, described below in the databases explanation
   - this allows me to have a test database that I can add bookmarks to and clear each time I run an rspec. As a result I don't have to change my tests according to what is in the database but I can add them via connection to PostgreSQL
 
+- Model of MVC I want to follow:
+```
+╔════════════╗         .all         ╔════════════╗  SELECT * FROM bookmarks; ╔════════════╗
+║            ║--------------------->║            ║-------------------------->║            ║
+║ Controller ║ [array of bookmarks] ║  Bookmark  ║      {result object}      ║  Database  ║
+║            ║<---------------------║            ║<--------------------------║            ║
+╚════════════╝                      ╚════════════╝                           ╚════════════╝
+```
+
+
+
 
 
 ### Setting up the database (Documenting Database Setup):
