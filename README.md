@@ -38,5 +38,6 @@ CREATE DATABASE bookmark_manager;
 ```
 - Then you must run the query from the file 01_create_bookmarks_table.sql
 
-
 - Create a testing database using the same steps as above
+
+- Add a new title column following 02_adding_title_column.sql to both databases
