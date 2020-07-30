@@ -77,22 +77,6 @@
           null
         ]
       },
-      "/Users/student/Documents/base/Course/week-4/week4-pairing/bookmark_manager/lib/database_connection.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
       "/Users/student/Documents/base/Course/week-4/week4-pairing/bookmark_manager/spec/features/adding_bookmark_spec.rb": {
         "lines": [
           1,
@@ -163,6 +147,6 @@
         ]
       }
     },
-    "timestamp": 1596121317
+    "timestamp": 1596121671
   }
 }
