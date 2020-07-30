@@ -1,4 +1,5 @@
 require 'pg'
+require_relative 'database_connection.rb'
 
 class Bookmark
 
@@ -11,38 +12,28 @@ class Bookmark
   end
 
   def self.create(url:, title:)
-    ENV['ENV'] == 'test' ? conn = PG.connect(dbname: 'bookmark_manager_test') : conn = PG.connect(dbname: 'bookmark_manager')
-
-    result = conn.exec("INSERT INTO bookmarks (title, url) VALUES('#{title}', '#{url}') RETURNING id, url, title")
+    result = DatabaseConnection.query("INSERT INTO bookmarks (title, url) VALUES('#{title}', '#{url}') RETURNING id, url, title")
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
 
   def self.all
-    ENV['ENV'] == 'test' ? conn = PG.connect(dbname: 'bookmark_manager_test') : conn = PG.connect(dbname: 'bookmark_manager')
-
-    result = conn.exec('SELECT * FROM bookmarks;')
+    result = DatabaseConnection.query('SELECT * FROM bookmarks;')
     result.map do |bookmark|
       Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
     end
   end
 
   def self.delete(id:)
-    ENV['ENV'] == 'test' ? conn = PG.connect(dbname: 'bookmark_manager_test') : conn = PG.connect(dbname: 'bookmark_manager')
-
-    conn.exec("DELETE FROM bookmarks where id = #{id}")
+    DatabaseConnection.query("DELETE FROM bookmarks where id = #{id}")
   end
 
   def self.update(id:, url:, title:)
-    ENV['ENV'] == 'test' ? conn = PG.connect(dbname: 'bookmark_manager_test') : conn = PG.connect(dbname: 'bookmark_manager')
-
-    result = conn.exec("UPDATE bookmarks SET url = '#{url}', title = '#{title}' WHERE id = '#{id}' RETURNING id, url, title;")
+    result = DatabaseConnection.query("UPDATE bookmarks SET url = '#{url}', title = '#{title}' WHERE id = '#{id}' RETURNING id, url, title;")
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
 
   def self.find(id:)
-    ENV['ENV'] == 'test' ? conn = PG.connect(dbname: 'bookmark_manager_test') : conn = PG.connect(dbname: 'bookmark_manager')
-
-    result = conn.exec("SELECT * FROM bookmarks WHERE id = #{id};")
+    result = DatabaseConnection.query("SELECT * FROM bookmarks WHERE id = #{id};")
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
 end

@@ -7,10 +7,13 @@ describe DatabaseConnection do
       expect(PG).to receive(:connect).with(dbname: 'bookmark_manager_test')
       DatabaseConnection.setup('bookmark_manager_test')
     end
+  end
 
-    it 'sets up connection that is ongoing' do
+  describe '.query' do
+    it 'executes an SQL command via PG' do
       conn = DatabaseConnection.setup('bookmark_manager_test')
-      expect(DatabaseConnection.connection).to eq conn
+      expect(conn).to receive(:exec).with('SELECT * FROM bookmarks;')
+      DatabaseConnection.query('SELECT * FROM bookmarks;')
     end
   end
 
