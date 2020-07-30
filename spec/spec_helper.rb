@@ -8,7 +8,7 @@ require 'database_helpers.rb'
 require_relative '../app'
 require_relative './setup_test_database.rb'
 
-ENV['ENVIRONMENT'] = 'test'
+ENV['ENV'] = 'test'
 
 RSpec.configure do |config|
   config.before(:each) do

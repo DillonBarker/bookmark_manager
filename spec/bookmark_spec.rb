@@ -1,17 +1,13 @@
-# frozen_string_literal: true
-
 require 'bookmark'
-require 'pg'
 
 describe Bookmark do
 
   describe '.all' do
     it 'returns list of all bookmark instances as an array' do
-
       bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
       Bookmark.create(url: 'http://www.destroyallsoftware.com', title: 'Destroy All Software')
       Bookmark.create(url: 'http://www.google.com', title: 'Google')
-
+      
       bookmarks = Bookmark.all
 
       expect(bookmarks.length).to eq 3

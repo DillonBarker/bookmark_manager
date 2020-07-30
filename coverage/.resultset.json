@@ -3,16 +3,12 @@
     "coverage": {
       "/Users/student/Documents/base/Course/week-4/week4-pairing/bookmark_manager/spec/bookmark_spec.rb": {
         "lines": [
-          null,
-          null,
-          1,
           1,
           null,
           1,
           null,
           1,
           1,
-          null,
           1,
           1,
           1,
@@ -129,6 +125,6 @@
         ]
       }
     },
-    "timestamp": 1596119107
+    "timestamp": 1596119425
   }
 }
