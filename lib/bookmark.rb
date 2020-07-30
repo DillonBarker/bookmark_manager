@@ -1,5 +1,6 @@
-require 'pg'
+# frozen_string_literal: true
 
+require 'pg'
 
 class Bookmark
 
@@ -12,11 +13,8 @@ class Bookmark
   end
 
   def self.create(url:, title:)
-    if ENV['ENVIRONMENT'] == 'test'
-      conn = PG.connect(dbname: 'bookmark_manager_test')
-    else
-      conn = PG.connect(dbname: 'bookmark_manager')
-    end
+    ENV['ENVIRONMENT'] == 'test' ? conn = PG.connect(dbname: 'bookmark_manager_test') : conn = PG.connect(dbname: 'bookmark_manager')
+
     result = conn.exec("INSERT INTO bookmarks (title, url) VALUES('#{title}', '#{url}') RETURNING id, url, title")
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
